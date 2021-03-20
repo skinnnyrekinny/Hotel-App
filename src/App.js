@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Router, Switch, Route } from "react-router-dom";
+import Cart from "./Cart";
+import Payment from "./Payment";
+import { HotelProvider } from "./HotelContext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HotelProvider>
+      <Switch>
+          <Route exact path="/" component={Cart}/>
+          <Route exact path="/payment" component={Payment}/>
+        </Switch>
+      </HotelProvider>
     </div>
   );
 }
