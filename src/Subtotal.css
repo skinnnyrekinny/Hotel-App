@@ -2,14 +2,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 100vh;
-    margin: 0 8rem;
-    padding: 2rem;
-    background-color: #f3f3f3;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
     align-items: flex-end;
+    margin: 0 10% 0 auto;
     min-width: fit-content;
-    z-index: 1;
+    max-width: 100vh;
+    min-height: 100%;
+    padding: 2rem;
+    color: white;
+    border-radius: 3px;
     flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 1450px) {
+    .subtotal {
+        margin: 0;
+    }
+}
+
+.buy-btn {
+    width: 100px;
+    height: 50px;
+    font-size: 2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -27,10 +27,10 @@ function Hotel({id, name, price, description, image}) {
                         {count}
                     </h4>
                     <button id="increment" onClick={() => setCount(count + 1)}>+</button>
-                </div>
-                <div className="cost">
-                    <h3>${sum()}</h3>
-                </div>
+                    <div className="cost">
+                        <h3>${sum()}</h3>
+                    </div>
+                </div> 
             </div>
         </div>
     );

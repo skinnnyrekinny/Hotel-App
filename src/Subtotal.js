@@ -9,7 +9,7 @@ function Subtotal() {
         <div className="subtotal">
             <h2>Subtotal: ${sum}</h2>
             <Link to="/payment">
-                <button>
+                <button className="buy-btn">
                     Buy
                 </button>
             </Link>
