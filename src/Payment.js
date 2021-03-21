@@ -1,50 +1,66 @@
-import React from "react"
+import React, { useState } from "react";
+import "./Payment.css";
+import { useForm } from "react-hook-form";
 
 function Payment() {
+    const nrPattern = "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/";
+    const emailPattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+    const { register, errors, handleSubmit } = useForm();
+
+
     return(
         <div className="payment">
-            <h1>This is Payment Page</h1>
-            <form>
-                <div className="input-group">
-                    <label htmlFor="name">Name*</label>
-                    <input 
-                        type="text"
-                        name="name"
-                        className="login-input"
-                        placeholder="John Kowalsky"
-                        required="true"
-                    />
-                </div>
-                <div className="input-group">
-                    <label htmlFor="address">Address*</label>
-                    <input 
-                        type="text"
-                        name="address"
-                        className="login-input"
-                        placeholder="I"
-                        required="true"
-                    />
-                </div>
-                <div className="input-group">
-                    <label htmlFor="phone">Phone</label>
-                    <input 
-                        type="text"
-                        name="phone"
-                        className="login-input"
-                        placeholder="+48"
-                    />
-                </div>
-                <div className="input-group">
-                    <label htmlFor="email">E-mail</label>
-                    <input 
-                        type="text"
-                        required="true"
-                    />
-                </div>
-                <div className="input-group">
-                    <button>Pay</button>
-                </div>
-            </form>
+                <h1>This is Payment Page</h1>
+                <form className="payment-form">
+                    <div className="input-group">
+                        <div className="labels"><label htmlFor="name">Name*</label></div>
+                        <input 
+                            type="text"
+                            name="name"
+                            className="login-input"
+                            placeholder="John Kowalsky"
+                            required="true"
+                            minLength="3"
+                        />
+                    </div>
+                    <div className="input-group">
+                        <div className="labels"><label htmlFor="address">Address*</label></div>
+                        <input 
+                            type="text"
+                            name="address"
+                            className="login-input"
+                            placeholder="I"
+                            required="true"
+                        />
+                    </div>
+                    <div className="input-group">
+                        <div className="labels"><label htmlFor="phone">Phone</label></div>
+                        <input 
+                            type="text"
+                            name="phone"
+                            className="login-input"
+                            placeholder="+48"
+                            pattern={nrPattern}
+                            minLength="9"
+                            maxLength="9"
+                        />
+                    </div>
+                    <div className="input-group">
+                        <div className="labels"><label htmlFor="email">E-mail</label></div>
+                        <input 
+                            name="email"
+                            type="text"
+                            required="true"
+                            placeholder="money$wag@hot.com"
+                            pattern={emailPattern}
+                            title="E-mail should contain @"
+                        />
+                        {errors.email && errors.email.type === "invalid" && <span>Invalid e-mail</span>}
+                    </div>
+                    <div className="input-group">
+                        <button className="btn-pay">Pay</button>
+                    </div>
+                </form>
         </div>
     );
 }

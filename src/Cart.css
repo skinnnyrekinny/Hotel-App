@@ -1,0 +1,11 @@
+.cart {
+    background-image: linear-gradient(to top, #330867 0%, #30cfd0 100%);
+}
+
+.cart > .header {
+    margin: auto;
+    padding-top: 20px;
+    color: white;
+    font-size: 5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

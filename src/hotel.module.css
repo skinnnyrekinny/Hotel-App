@@ -1,13 +1,13 @@
 .hotel {
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgb(71,71,71);
-    margin: 3rem 8rem;
+    margin: 20px 10%;
     padding: 2rem;
     display: flex;
     flex-direction: row;
     background: white;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     min-width: 40%;
     min-width: fit-content;
     z-index: 1;
@@ -16,7 +16,7 @@
 
 .image {
     border-radius: 5%;
-    object-fit:cover;
+    object-fit: cover;
     width: 40vh;
     height: 40vh;
     max-width: 100%;
@@ -26,12 +26,14 @@
 
 .title {
     text-align: left;
-    max-width: 60vh;
+    min-width: 40vh;
+    max-width: 70vh;
     height: 40vh;
-    margin: 0 3em;
+    margin: 0 2%;
     vertical-align: top;
     border: lawngreen solid;
     padding-top: 0;
+    align-self: center;
 }
 
 .title > p {
@@ -53,4 +55,16 @@
     display: inline-flex;
     margin-left: 50px;
     position: absolute;
+}
+
+.trash {
+    width: 20px;
+}
+
+.trashBtn {
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
