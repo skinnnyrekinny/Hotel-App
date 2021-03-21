@@ -16,7 +16,7 @@
 
 @media (max-width: 1450px) {
     .subtotal {
-        margin: 0;
+        margin: 0 10% 0 auto;
     }
 }
 

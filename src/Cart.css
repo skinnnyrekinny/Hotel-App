@@ -11,6 +11,12 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@media (max-width: 500px) {
+    .cart > .header {
+        font-size: 3rem;
+    }
+}
+
 .card {
     margin-top: 20px;
 }
