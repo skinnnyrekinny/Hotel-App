@@ -7,8 +7,11 @@
 }
 
 .payment > h1 {
-    margin: auto;
-    margin-bottom: 30px;
+    margin: 0 auto 2% auto;
+    padding-top: 20px;
+    color: white;
+    font-size: 5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .payment-form {
@@ -32,12 +35,4 @@ input {
     margin-right: 5px;
     display: inline-flex;
     width: 70px;
-}
-
-.btn-pay {
-    background: #f0c14b;
-    border: 1px solid;
-    margin: 10px;
-    width: 70px;
-    color: #111111;
 }

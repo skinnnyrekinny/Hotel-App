@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { Link} from "react-router-dom";
 import "./Payment.css";
 import { useForm } from "react-hook-form";
 
 function Payment() {
+
     const nrPattern = "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/";
     const emailPattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
     const { register, errors, handleSubmit } = useForm();
 
-
     return(
         <div className="payment">
-                <h1>This is Payment Page</h1>
+                <h1>Checkout</h1>
                 <form className="payment-form">
                     <div className="input-group">
                         <div className="labels"><label htmlFor="name">Name*</label></div>
@@ -57,8 +58,13 @@ function Payment() {
                         />
                         {errors.email && errors.email.type === "invalid" && <span>Invalid e-mail</span>}
                     </div>
-                    <div className="input-group">
-                        <button className="btn-pay">Pay</button>
+                    <div className="input-group buttons">
+                        <Link to="/">
+                            <button className="back-btn">
+                                Go back
+                            </button>
+                        </Link>
+                        <button className="btn-pay" onClick="false">Pay</button>
                     </div>
                 </form>
         </div>

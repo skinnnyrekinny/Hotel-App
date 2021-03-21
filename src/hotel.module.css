@@ -61,7 +61,6 @@
     width: 25vh;
     align-items: center;
     justify-content: center;
-    border:lightseagreen solid;
 }
 
 .counter > button {
@@ -73,11 +72,16 @@
 }
 
 .trashBtn {
+    background-color: transparent;
+    border: none;
     float: right;
+}
+
+.trashBtn :active {
+    border: none;
 }
 
 .summary {
     display: flex;
     flex-direction: column;
-    border:lightcoral solid;
 }
